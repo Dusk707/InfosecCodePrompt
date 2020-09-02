@@ -1,12 +1,12 @@
-import BasePage
+from BasePage import BasePage
 
 class StorefrontPage(BasePage):
   def __init__(self, driver):
     self.driver = driver
 
   def ClickSignInButton(self):
-    ClickButtonByClass("login")
+    BasePage.ClickButtonByClass("login")
     return SignInPage(driver)
 
   def ClickSignOutButton(self):
-    ClickButtonByClass("logout")
+    BasePage.ClickButtonByClass("logout")

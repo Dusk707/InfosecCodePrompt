@@ -3,15 +3,27 @@ import sys
 import unittest
 import random
 import string
-import StorefrontPage, SignInPage, CreateAccountPage, MyAccountPage
+from StorefrontPage import StorefrontPage
+from SignInPage import SignInPage
+from CreateAccountPage import CreateAccountPage
+from MyAccountPage import MyAccountPage
 #sys.path.insert(0,'/usr/lib/chromium-browser/chromedriver')
-#from selenium import webdriver
-#from selenium.webdriver.common.keys import Keys
-#chrome_options = webdriver.ChromeOptions()
-#chrome_options.add_argument('--headless')
-#chrome_options.add_argument('--no-sandbox')
-#chrome_options.add_argument('--disable-dev-shm-usage')
-#driver = webdriver.Chrome('chromedriver',chrome_options=chrome_options)
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
+driver = webdriver.Chrome('chromedriver',chrome_options=chrome_options)
+
+# define commonly functions
+def HasElementById(id):
+  elems = driver.find_elements_by_id(id)
+  return len(elems) > 0
+
+def HasElementByClass(className):
+  elems = driver.find_elements_by_class_name(className)
+  return len(elems) > 0
 
 # start test version 2, using page classes
 # navigate to registration page to begin test

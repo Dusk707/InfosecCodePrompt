@@ -21,7 +21,7 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 driver = webdriver.Chrome('chromedriver',chrome_options=chrome_options)
 
-# define commonly functions
+# define commonly used functions
 def HasElementById(id):
   elems = driver.find_elements_by_id(id)
   return len(elems) > 0

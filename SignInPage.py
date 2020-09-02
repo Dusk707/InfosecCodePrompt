@@ -1,11 +1,11 @@
-import BasePage
+from BasePage import BasePage
 
 class SignInPage(BasePage):
   def __init__(self, driver):
     self.driver = driver
   
   def ClickCreateAccountButton(self):
-     ClickButtonById("SubmitCreate")
+     BasePage.ClickButtonById("SubmitCreate")
      return CreateAccountPage(driver)
 
   def SetCreateAccountEmail(self, email):

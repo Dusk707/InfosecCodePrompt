@@ -1,4 +1,4 @@
-import BasePage
+from BasePage import BasePage
 
 class CreateAccountPage(BasePage):
   def __init__(self, driver):
@@ -29,7 +29,7 @@ class CreateAccountPage(BasePage):
     driver.find_element_by_id("postcode").clear()
 
   def ClickRegisterButton(self):
-    ClickButtonById("submitAccount")
+    BasePage.ClickButtonById("submitAccount")
     return MyAccountPage(self.driver)
 
   def GetErrorMessageText(self):
