@@ -1,6 +1,13 @@
 # InfosecCodePrompt
-Test Case Steps:
+About the test case and repository:
+This repository was created as part of the practical coding challenge for Infosec.  Development of this test case was done initially using Google Colab, which was then imported into GitHub and further refined in Visual Studio.
+The challenge was to create a functional test for registering an account on the website http://automationpractice.com/index.php, along with identifying what functionality should be tested beyond the basic "happy path" of registration.
+The twenty steps below are the different pieces to the registration process that are being tested.  Listed below the steps are potential improvements to the site to make test automation better and more consistent.
+Included in this file are future improvements that can be made to the test, along with a change log of the work done on the test.
+There are two versions of the test file: InfosecCodePromptV1.py and InfosecCodePromptV2.py.  V1 has all driver calls being made within the file itself.  V2 uses page objects to reduce the number of driver calls and repeated code for easier understanding and maintenance.
+InfosecCodePromptFromColab.ipynb is the imported file from Google Colab.
 
+Test Case Steps:
 1. Attempt to create account with no email, expected error message
 2. Attempt to create account with invalid email, expected failed field validation and error message on submission
 3. Attempt to create account with valid email, expect to proceed to next page upon submission, verify provided email is in the info email field
@@ -23,15 +30,13 @@ Test Case Steps:
 20. Attempt to complete form with all required fields properly filled in, expect no errors, taken to the My Account Page
 
 Notes about site functionality:
-
-* Every field in the Your Address section has no field based validation like in the Your Personal Information section
+* Every field in the 'Your Address' section has no field based validation, while the 'Your Personal Information' section does
 * Can enter all numbers in City field
 * Can enter any number of digits into phone number field
 * Inconsistent naming of ids and classes (some are camelCase, some use an underscore)
 
 Future improvements to test:
 * Proper wait conditions
-* Visual debugger integration
 * More comprehensive validation functions
 * Creatation of getter/setter for fields
 
@@ -41,3 +46,5 @@ Change Log:
 * August 29, 2020 - Final ten steps of test written, added section on future improvments to the test
 * August 30, 2020 - Create page objects for test use
 * August 31, 2020 - Creates version 2 of test using page objects
+* September 1, 2020 - Minor updates to version 2 addressing build failures
+* September 2, 2020 - Resolves build errors and exceptions occuring in version 2
