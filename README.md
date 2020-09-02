@@ -1,5 +1,6 @@
 # InfosecCodePrompt
 About the test case and repository:
+
 This repository was created as part of the practical coding challenge for Infosec.  Development of this test case was done initially using Google Colab, which was then imported into GitHub and further refined in Visual Studio.
 The challenge was to create a functional test for registering an account on the website http://automationpractice.com/index.php, along with identifying what functionality should be tested beyond the basic "happy path" of registration.
 The twenty steps below are the different pieces to the registration process that are being tested.  Listed below the steps are potential improvements to the site to make test automation better and more consistent.
