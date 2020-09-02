@@ -7,7 +7,6 @@ from StorefrontPage import StorefrontPage
 from SignInPage import SignInPage
 from CreateAccountPage import CreateAccountPage
 from MyAccountPage import MyAccountPage
-#sys.path.insert(0,'/usr/lib/chromium-browser/chromedriver')
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 chrome_options = webdriver.ChromeOptions()
@@ -24,6 +23,19 @@ def HasElementById(id):
 def HasElementByClass(className):
   elems = driver.find_elements_by_class_name(className)
   return len(elems) > 0
+
+def Validation(condition, status, message):
+  if status:
+    if not condition:
+      print(message)
+  else:
+    if condition:
+      print(message)
+
+def GetRandomString(length):
+  letters = string.ascii_lowercase
+  resultStr = ''.join(random.choice(letters) for i in range(length))
+  return resultStr
 
 # start test version 2, using page classes
 # navigate to registration page to begin test

@@ -12,7 +12,6 @@ import sys
 import unittest
 import random
 import string
-#sys.path.insert(0,'/usr/lib/chromium-browser/chromedriver')
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 chrome_options = webdriver.ChromeOptions()

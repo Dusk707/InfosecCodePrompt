@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
@@ -12,8 +11,8 @@ class BasePage(object):
         self.driver = driver
         self.timeout = 30
 
-  def ClickButtonByClass(className):
-    driver.find_element_by_class_name(className).click()
+  def ClickButtonByClass(self, className):
+    self.driver.find_element_by_class_name(className).click()
   
-  def ClickButtonById(id):
-    driver.find_element_by_id(id).click()
+  def ClickButtonById(self, id):
+    self.driver.find_element_by_id(id).click()

@@ -5,4 +5,4 @@ class MyAccountPage(BasePage):
     self.driver = driver
 
   def ClickLogOutButton(self):
-    BasePage.ClickButtonByClass("logout")
+    BasePage.ClickButtonByClass(self, "logout")
